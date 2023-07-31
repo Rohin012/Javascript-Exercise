@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise2</title>
+    <style>
+        *{
+            text-align: -webkit-center;
+            font-size: 20px;
+        }
+        .div{
+            text-align: -webkit-center;
+            padding: 40px;
+            border: 1px solid;
+            width: 200px;
+            }
+        input{
+            width: 150px;
+            height: 25px;
+        }
+        .box{
+            border: 1px solid;
+             height: 36px;
+             width: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="div">
+    <input class="box1" type="number"id="num1"><br><br>
+    <input class="box1" type="number"id="num2"><br><br>
+    <button onclick="Add()">Submit</button><br><br>
+    <p class="box" id="plus"></p>
+</div>
+    <script>
+        function plus(a,b){
+           return a + b ;
+        }
+        function Add(){
+        var text1 = document.getElementById("num1").value;
+        var text2 = document.getElementById("num2").value;
+         document.getElementById("plus").innerHTML= plus(Number(text1),Number(text2));
+        }
+    </script>
+</body>
+</html>
