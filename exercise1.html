@@ -8,7 +8,8 @@
         .box{
              width: 100px;height: 53px; 
             border: 1px solid black;
-            text-align: center;padding-top: 30px;
+            text-align: center;padding-top: 25px;
+            font-size: 30px;
         }
         .container{
             display: grid;
@@ -21,22 +22,24 @@
 <body>
     <div class="container">
     <div id="box1" class="box" onclick="changes('box1')"></div>
-    <div id="box2" class="box" onclick="changesare('box2')"></div>
-    <div id="box3" class="box" onclick="changesare('box3')"></div>
-    <div id="box4" class="box" onclick="changesare('box4')"></div>
+    <div id="box2" class="box" onclick="changes('box2')"></div>
+    <div id="box3" class="box" onclick="changes('box3')"></div>
+    <div id="box4" class="box" onclick="changes('box4')"></div>
     <div id="box5" class="box" onclick="changes('box5')"></div>
-    <div id="box6" class="box" onclick="changesare('box6')"></div>
-    <div id="box7" class="box" onclick="changesare('box7')"></div>
-    <div id="box8" class="box" onclick="changesare('box8')"></div>
+    <div id="box6" class="box" onclick="changes('box6')"></div>
+    <div id="box7" class="box" onclick="changes('box7')"></div>
+    <div id="box8" class="box" onclick="changes('box8')"></div>
     <div id="box9" class="box" onclick="changes('box9')"></div>
 </div>
 <script>
+        numberofclick = "0";
     function changes(id){
-        document.getElementById(id).innerText= "X";
+        var clicked = document.getElementById(id);
+        numberofclick++;
+        clicked.innerText = numberofclick % 2 !== 0? "X":"0";
+        clicked.style.pointerEvents = "none";
     }
-    function changesare(id){
-        document.getElementById(id).innerText= "0";
-    }
+    
 
 </script>
 </body>
