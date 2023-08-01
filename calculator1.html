@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="text"id="input1">
+    <select name="select" id="select">
+        <option value="">select</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+        
+    </select>
+    <br><br>
+    <input type="text"id="input2"><br><br>
+    <button onclick="Submit()">Submit</button><br><br>
+    <input type="text" readonly id="ans"><br><br>
+    
+    
+    <script>
+        function Submit(select){
+        let num1 = Number(document.getElementById("input1").value);
+        let num2 = Number(document.getElementById("input2").value);
+        let operator = document.getElementById("select").value;
+        document.getElementById("ans").value = eval(num1 + operator +num2);
+        }
+
+         
+    </script>
+</body>
+</html>
