@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input type="text"id="input1">
+    <select name="select" id="select">
+        <option value="">select</option>
+        <option value="plus">plus</option>
+        <option value="minus">minus</option>
+        <option value="divide">divide</option>
+        <option value="multiply">multiply</option>
+        
+    </select>
+    <br><br>
+    <input type="text"id="input2"><br><br>
+    <button onclick="calculate()">Submit</button><br><br>
+    <div id="result"></div>
+    <script>
+        function calculate(){
+        var result;
+         var value1 =Number(document.getElementById("input1").value);
+         var value2 =Number(document.getElementById("input2").value);
+         var operation = document.getElementById("select").value;
+         switch(operation){
+            case "plus":
+                result = value1 + value2;
+                break;
+            case "multiply":
+                result = value1 * value2;
+                break;
+            case "minus":
+                result = value1 - value2;
+                break;
+            case "divide":
+                result = value1 / value2;
+                break;
+            case "defult":
+                result = "select the value";
+                break;
+         }
+         document.getElementById("result").innerText = result;
+         document.getElementById("input1").value ="";
+         document.getElementById("input2").value ="";
+         
+        }
+    </script>
+</div>
+</body>
+</html>
