@@ -12,7 +12,11 @@
     <div id="result"></div>
     <script>
         function getresult(a, b){
-            return a << b ;
+            var result = 1;
+            for(var i = 0; i < b; i++){
+                result = result * a ;
+            }
+            return result;
         }
         function results(){
         var value1 = document.getElementById("input1").value;
