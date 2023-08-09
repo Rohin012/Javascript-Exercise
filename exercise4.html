@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>penalty jar</title>
+</head>
+<body>
+    <div>
+        Current Penalty Value :
+        <span id="Penaltyvalue"></span>
+    </div><br><br>
+    <button onclick="addPenalty()"> + 10</button><br><br>
+    <input type="text" id="input1"><br><br>
+    <button onclick="addcustomvalue()">addcustomvalue</button>
+    <script>
+        var currentvalue = 0;
+        function addPenalty(){
+            document.getElementById("Penaltyvalue").innerText = 
+            currentvalue + 10;
+            currentvalue = currentvalue + 10;
+        }
+        function addcustomvalue(){
+            document.getElementById("Penaltyvalue").innerText = 
+            Number(currentvalue) + Number(document.getElementById("input1").value);
+            currentvalue = currentvalue +Number(document.getElementById("input1").value);
+        }
+    </script>
+</body>
+</html>
