@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise</title>
+</head>
+<body>
+    <input type="text"id="input1"/>
+    <button onclick="calculate()">submit</button>
+    <div id="result"></div>
+    <script>
+      function calculate(){  
+      let num3 = document.getElementById("input1").value;
+      let num1 = 0;
+      let num2 = 1;      
+      let num4 = '0, 1';
+      for(let i = 3; i <= num3; i++){
+       let num5 = num1 + num2;
+        num4 = num4 + ', '+ num5 ;
+        num1 = num2;
+        num2 = num5 ;
+       
+      }
+      document.getElementById("result").innerHTML= num4;
+    }
+    </script>
+</body>
+</html>

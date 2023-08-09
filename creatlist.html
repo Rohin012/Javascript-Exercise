@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <button onclick="submit()">submit</button>
+    <div id="input3"></div>
+    <script>
+        
+        var value1 = document.getElementById("input1").value;
+         let text = " ";
+        function submit(){
+            text += "<ul>";
+            for(var i = 0; i < value1 ; i++){
+           text += "<li>" + value1[i] + "<li>" ; 
+            }
+            text += "<ul>";
+        console.log(text);
+        document.getElementById("input3").innerHTML = text;
+        document.getElementById("input1").value = " ";
+     }
+    </script>
+</body>
+</html>
