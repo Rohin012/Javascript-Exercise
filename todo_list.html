@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+</head>
+<style>
+    body{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .container{
+        border: 2px solid darkblue;
+    text-align: center;
+    height: 267px;
+    width: 270px;
+    padding: 30px;
+    filter: drop-shadow(2px 4px 1px gray);
+    border: rgb(126, 160, 189);
+
+    }
+    .box{
+        margin: 40px;
+    text-align: left;
+    font-size: x-large;
+    }
+    #inputbox{
+        width: 200px;
+    height: 30px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border: aliceblue;
+    padding: 8px;
+    }
+    button{
+        height: 45px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 50px;
+    border: aliceblue;
+}
+    </style>
+<body>
+    <div class="container">
+    <input type="text"id="inputbox">
+    <button onclick="addtodo()">add</button><br>
+    
+    <div class="box">
+        Todo list :<ul id="list"> </ul>    
+    </div>
+</div>
+    <script>
+       const inputbox = document.getElementById("inputbox"); 
+       const list = document.getElementById("list");
+       function addtodo(){
+           if(inputbox.value === ' '){
+                    alert("add your text")
+           }else{
+            let li = document.createElement("li");
+            li.innerHTML = inputbox.value;
+            list.appendChild(li);
+            
+           }
+           inputbox.value = ' ';
+       }
+    </script>
+</body>
+</html>
