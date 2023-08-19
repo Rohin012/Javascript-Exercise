@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion</title>
+    <style>
+    *{
+        margin: 0;padding: 0;
+    }
+        p{
+            display: none;
+        }
+    div:hover p{
+            display: block;
+        }
+    .myStyle {
+                background-color: coral;
+                display: block;
+                padding: 16px;
+            }
+     button{
+        border: none;
+        width: 100%;
+        text-align: inherit;
+        padding: 16px;
+        font-size: 30px;
+        }
+    
+    </style>
+</head>
+<body>
+    <button onclick="myFunction('myDIV')">section1</button>
+    <div >
+        <p id="myDIV">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo natus,<br> impedit nesciunt dicta voluptatem recusandae illo odit ut perferendis autem.</p>
+    </div>
+    <button  onclick="myFunction('myDIV1')">section2</button>
+    <div >
+        <p id="myDIV1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo natus,<br> impedit nesciunt dicta voluptatem recusandae illo odit ut perferendis autem.</p>
+    </div>
+    <button  onclick="myFunction('myDIV2')">section3</button>
+    <div>
+        <p id="myDIV2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo natus,<br> impedit nesciunt dicta voluptatem recusandae illo odit ut perferendis autem.</p>
+    </div>
+    <script>
+      
+      function myFunction(id) {
+                const list = document.getElementById(id);
+                if(list.classList.length === 0){
+                 list.classList.add("myStyle");
+                }else{
+                    list.classList.remove("myStyle");
+                }
+        }
+       
+    </script>
+</body>
+</html>
